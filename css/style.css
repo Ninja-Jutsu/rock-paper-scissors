@@ -10,7 +10,11 @@ color: aliceblue;
     color: azure;
     text-align: center;
     font-size: 28px;
-    border: 2px solid wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .results p {
@@ -20,9 +24,11 @@ color: aliceblue;
 
 
 button {
+    display: flex;
+    align-items: center;
     border: 5px solid darkslategray;
     text-align: center;
-    margin: 20px;
+    
     font-size: 38px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
@@ -36,6 +42,8 @@ button:hover {
 .button-display {
     display: flex;
     justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -43,7 +51,6 @@ h1 {
     text-align: center;
     font-size: 38px;
     font-family: "Sofia", sans-serif;
-    margin-top: 15%;
     text-decoration: underline;
 }
 

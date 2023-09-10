@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Page Title</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-  <script src="js/myScript.js"></script>
+  <script src="./js/myScript.js"></script>
 </head>
 <body>
   <h1>Your simple Rock Paper Scissors</h1>
@@ -16,23 +16,31 @@ computerMove();
 //  I pick a Pick either & compare it to comp Pick
 pickComparison('rock');
 "
-><img src="img/rock.gif" alt="rock"></button>
+><img src="./img/rock.gif" alt="rock"></button>
 
 <button onclick="
 // Computer pick a random number between 0 and 1.
 computerMove();
 //  I pick a Pick either & compare it to comp Pick
 pickComparison('paper');"
-><img src="img/paper.gif" alt="paper"></button>
+><img src="./img/paper.gif" alt="paper"></button>
 
 <button onclick="
 // Computer pick a random number between 0 and 1.
 computerMove();
 //  I pick a Pick either & compare it to comp Pick
 pickComparison('scissors');"
-><img src="img/scissors.gif" alt="scissors"></button>
+><img src="./img/scissors.gif" alt="scissors"></button>
+</div>
+
+<div class="results">
+  <h2><em>Score Count:</em></h2>
+  <p>Wins : 0 Losses: 0 Ties: 0</p>
+</div>
 
 <!-- A reset button to reset the score  -->
+
+<div class="button-display">
 <button onclick="
 scoreCount.wins = 0;
 scoreCount.losses = 0;
@@ -40,12 +48,6 @@ scoreCount.ties = 0;
 localStorage.removeItem('score');
 "
 >Reset Score</button>
-</div>
-
-
-<div class="results">
-  <h2><em>Score count</em></h2>
-  <p></p>
 </div>
 
 </body>
