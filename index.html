@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/myScript.js"></script>
+</head>
+<body>
+
+  <div>
+<button onclick=" 
+// Computer pick a random number between 0 and 1.
+computerMove();
+//  I pick a Pick either & compare it to comp Pick
+pickComparison('rock');
+"
+>Rock</button>
+
+<button onclick="
+// Computer pick a random number between 0 and 1.
+computerMove();
+//  I pick a Pick either & compare it to comp Pick
+pickComparison('paper');"
+>Paper</button>
+
+<button onclick="
+// Computer pick a random number between 0 and 1.
+computerMove();
+//  I pick a Pick either & compare it to comp Pick
+pickComparison('scissors');"
+>Scissors</button>
+
+<!-- A reset button to reset the score  -->
+<button onclick="
+scoreCount.wins = 0;
+scoreCount.losses = 0;
+scoreCount.ties = 0;
+localStorage.removeItem('score');
+"
+>Reset Score</button>
+</div>
+
+</body>
+</html>
