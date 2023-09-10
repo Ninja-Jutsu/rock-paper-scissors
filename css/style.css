@@ -1,5 +1,11 @@
+body{
+background-color: black;
+}
+
+
+
 button {
-    border: 5px solid gold;
+    border: 5px solid darkslategray;
     border-radius: 16px;
     text-align: center;
     margin: 20px;
@@ -7,9 +13,23 @@ button {
     font-size: 38px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
+    padding: 10px 15px;
+}
+
+button:hover {
+    color: brown;
+    background-color: lightgray;
+    font-weight: bolder;
 }
 
 div {
     display: flex;
     justify-content: center;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    margin-top: 15%;
+    text-decoration: underline;
 }
