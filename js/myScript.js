@@ -15,7 +15,8 @@ function computerMove(){
 }
 let result='';
 
-// For reset button to delete saved results successfully
+// Get the score out of the local storage using "getItem" object
+// Turn score string into a variable using JSON.parse.
 const scoreCount = JSON.parse(localStorage.getItem('score')) || 
 {
   wins: 0,
@@ -36,7 +37,6 @@ function pickComparison(playerMove){
     else if (computerPick === 'Paper'){
       result = 'You Lose!'
     }
-
     // Paper comparison
 } else if (playerMove === 'paper'){
     if (computerPick === 'Rock'){
@@ -72,9 +72,13 @@ function pickComparison(playerMove){
  else if (result === 'You Tie!'){
   scoreCount.ties += 1
  }
-// Save the score as a string inside LocalStorage
+// Save the score as a string inside LocalStorage.
+// Turn score string into a variable using JSON.stringify.
  localStorage.setItem('score', JSON.stringify(scoreCount))
 
-alert(`You picked ${playerMove}. The computer picked ${computerPick} . ${result}
-Wins : ${scoreCount.wins} Losses: ${scoreCount.losses} Ties: ${scoreCount.ties}`)
+
+// The text to display in the popup
+document.querySelector("p").innerHTML = (`You picked ${playerMove}.
+The computer picked ${computerPick} <br><b>${result}</b><br>
+<span style="color:green">Wins</span> : ${scoreCount.wins}  <span style="color:red">Losses</span>: ${scoreCount.losses}   <span style="color:grey">Ties</span>: ${scoreCount.ties}`)
 }

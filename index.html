@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Your simple Rock Paper Scissors</h1>
-  <div>
+  <div class="button-display">
 <button onclick=" 
 // Computer pick a random number between 0 and 1.
 computerMove();
@@ -39,6 +39,12 @@ scoreCount.ties = 0;
 localStorage.removeItem('score');
 "
 >Reset Score</button>
+</div>
+
+
+<div class="results">
+  <h2><em>Score count</em></h2>
+  <p></p>
 </div>
 
 </body>
