@@ -21,20 +21,16 @@ color: aliceblue;
 
 button {
     border: 5px solid darkslategray;
-    border-radius: 16px;
     text-align: center;
     margin: 20px;
-    padding: 10px;
     font-size: 38px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
-    padding: 10px 15px;
 }
 
 button:hover {
-    color: brown;
-    background-color: lightgray;
-    font-weight: bolder;
+    background-color: rgb(237, 201, 201);
+    cursor: pointer;
 }
 
 .button-display {
@@ -45,6 +41,8 @@ button:hover {
 h1 {
     color: aliceblue;
     text-align: center;
+    font-size: 38px;
+    font-family: "Sofia", sans-serif;
     margin-top: 15%;
     text-decoration: underline;
 }
@@ -52,4 +50,9 @@ h1 {
 h2 {
     margin-bottom: 0px;
     padding-bottom: 0px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
 }
