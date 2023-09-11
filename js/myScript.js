@@ -13,8 +13,8 @@ function computerMove(){
   }
   return (computerPick); 
 }
-let result='';
 
+let result='';
 // Get the score out of the local storage using "getItem" object
 // Turn score string into a variable using JSON.parse.
 const scoreCount = JSON.parse(localStorage.getItem('score')) || 
@@ -61,6 +61,10 @@ function pickComparison(playerMove){
       result = 'You Win!';
     }
 }
+function updateResult(){
+  document.querySelector(".js-results").innerHTML = `${result}`;
+}
+
 
 // Count score
  if (result === 'You Win!'){
@@ -76,9 +80,21 @@ function pickComparison(playerMove){
 // Turn score string into a variable using JSON.stringify.
  localStorage.setItem('score', JSON.stringify(scoreCount))
 
-
-// The text to display in the popup
-document.querySelector("p").innerHTML = (`You picked ${playerMove}.
-The computer picked ${computerPick} <br><b>${result}</b><br>
-<span style="color:green">Wins</span> : ${scoreCount.wins}  <span style="color:red">Losses</span>: ${scoreCount.losses}   <span style="color:grey">Ties</span>: ${scoreCount.ties}`)
+updateScore();
+updateMoves();
+updateResult();
+function updateMoves(){
+  document.querySelector(".js-moves").innerHTML = `${playerMove} Vs ${computerPick}`
+};
 }
+
+// Update score also used to reset score
+function updateScore(){
+  document.querySelector(".js-score").innerHTML = `Wins : ${scoreCount.wins}
+   Losses : ${scoreCount.losses} Ties : ${scoreCount.ties}`;
+}
+
+function removeResult (){
+  document.querySelector(".js-results").innerHTML = `-----`;
+}
+

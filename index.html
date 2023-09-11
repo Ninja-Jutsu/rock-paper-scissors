@@ -35,17 +35,22 @@ pickComparison('scissors');"
 
 <div class="results">
   <h2><em>Score Count:</em></h2>
-  <p>Wins : 0 Losses: 0 Ties: 0</p>
+  <p class="js-moves"></p>
+  <p class="js-results"></p>
+  <p class="js-score">Wins : 0 Losses: 0 Ties: 0</p>
 </div>
 
 <!-- A reset button to reset the score  -->
 
 <div class="button-display">
 <button onclick="
+removeResult ();
 scoreCount.wins = 0;
 scoreCount.losses = 0;
 scoreCount.ties = 0;
 localStorage.removeItem('score');
+updateScore();
+updateResult() = ' ';
 "
 >Reset Score</button>
 </div>

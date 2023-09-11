@@ -18,7 +18,7 @@ color: aliceblue;
 }
 
 .results p {
-    border: 1px solid gold;
+    border: 0.5px solid rgb(225, 221, 195);
     display: inline-block;
 }
 
@@ -28,7 +28,6 @@ button {
     align-items: center;
     border: 5px solid darkslategray;
     text-align: center;
-    
     font-size: 38px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
@@ -62,4 +61,13 @@ h2 {
 img {
     width: 100px;
     height: 100px;
+}
+
+p {
+margin: 10px;
+padding: 5px 7px;
+}
+
+.js-moves {
+    text-transform: capitalize;
 }
